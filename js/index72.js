@@ -1,7 +1,7 @@
 function exercise2 (event) {
 
     var collection = []   
-  var elemData = {
+    var elemData = {
        name: "div",
         attrs: {
            className: "container",
@@ -11,7 +11,7 @@ function exercise2 (event) {
                background-color: #ff00ff50;
            `
         }
-      }
+    }
 
       function over ( event ) {
         event.target.style.backgroundColor = "#ffff0050"
@@ -49,11 +49,6 @@ function exercise2 (event) {
        index === 0 ? null : 
           collection.push ( insertElement ( index, collection [ index - 1 ]) )
 })
-
-
-
-    
-
 
     // var collection = []
     // collection [0] = insertElement ( 0, document.querySelector ('.result2') )

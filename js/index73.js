@@ -5,7 +5,7 @@ function exercise3 (event) {
        name: "div",
         attrs: {
            className: "container",
-           title: [ "first", "second", "third", "fourth", "fifth", "sixth" ],
+           title: [1, 2, 3, 4, 5, 6, 7],
            style: `
                border: dotted 1px yellow;;
                background-color: #ff00ff50;
@@ -13,17 +13,18 @@ function exercise3 (event) {
         }
       }
 
-      function enter ( event ) {
+    function enter ( event ) {
       	event.target.style.backgroundColor = "#ffff0050"
-      }
-      function leave ( event ) {
-      	event.target.style.backgroundColor = "#ff00ff50"
-      }
-      function clickHandler ( event ) {
-      	event.stopPropagation()
-        event.target.remove ()
-        event.target.removeEventListener()
-      }
+    }
+    function leave ( event ) {
+    	event.target.style.backgroundColor = "#ff00ff50"
+    }
+    function clickHandler ( event ) {
+      	event.target.children.length ?
+        event.target.parentNode.appendChild(event.target.children[0]) : null
+    	event.target.remove()
+	}
+    
 
 
 
@@ -49,5 +50,5 @@ function exercise3 (event) {
     elemData.attrs.title.forEach (function ( tag, index  ) {
        index === 0 ? null : 
           collection.push ( insertElement ( index, collection [ index - 1 ]) )
-})
+	})
 }
