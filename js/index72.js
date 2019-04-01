@@ -34,8 +34,8 @@ function exercise2 (event) {
        for ( var attr in elemData.attrs )  
          elem [ attr ] = elemData.attrs [ attr ]
        elem.title = elemData.attrs.title [ elemNum ]
-       elem.style.width = `${300 - elemNum * 50}px`
-       elem.style.height = `${300 - elemNum * 50}px`
+       elem.style.width = `${250 - elemNum * 25}px`
+       elem.style.height = `${250 - elemNum * 25}px`
         
        elem.addEventListener ( 'mouseover', over )
        elem.addEventListener ( 'mouseout', out )
@@ -55,5 +55,41 @@ function exercise2 (event) {
     // for ( var x = 1; x < elemData.attrs.title.length; x++ ) {
     //    collection [x] = insertElement ( x, collection [ x - 1 ] )
     // }
+    
+    /*
+    var collection = []
+
+function over ( event ) {
+    event.target.style.backgroundColor = '#ffff0050'
+}
+function out ( event ) {
+    event.target.style.backgroundColor = '#ff00ff50'
+}
+function clickHandler ( event ) {
+    event.target.remove()
+}
+
+
+
+[ "first", "second", "third", "fourth" ].forEach (
+    function ( tag, index, arr  ) {
+        
+    var x = (index ? collection[index - 1] : document.querySelector(".result2")).appendChild(
+      document.createElement('div')
+    )
+    collection.push(x)
+    x.style = `
+      width: ${250-index * 25}px;
+      height: ${250-index * 25}px;
+      background-color: #ff00ff50;
+      border: dotted 1px yellow;
+    `
+    x.title = tag
+    x.onmouseover = over
+    x.onmouseout = out
+    x.onclick = clickHandler
+    }
+)
+    */
 
 }
