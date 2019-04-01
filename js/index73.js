@@ -36,8 +36,8 @@ function exercise3 (event) {
        for ( var attr in elemData.attrs )  
          elem [ attr ] = elemData.attrs [ attr ]
        elem.title = elemData.attrs.title [ elemNum ]
-       elem.style.width = `${300 - elemNum * 50}px`
-       elem.style.height = `${300 - elemNum * 50}px`
+       elem.style.width = `${250 - elemNum * 25}px`
+       elem.style.height = `${250 - elemNum * 25}px`
         
        elem.addEventListener ( 'mouseenter', enter )
        elem.addEventListener ( 'mouseleave', leave )
